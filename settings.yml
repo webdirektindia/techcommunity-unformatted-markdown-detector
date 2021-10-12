@@ -1,0 +1,4 @@
+emoji_icon:
+  default: 👩🏽‍💻
+  description:
+    en: The emoji icon to be displayed next to the title in the unformatted warning modal.

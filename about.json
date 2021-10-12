@@ -1,0 +1,12 @@
+{
+  "name": "techcommunity-unformatted-markdown-detector",
+  "component": true,
+  "license_url": "https://github.com/webdirektindia/techcommunity-unformatted-markdown-detector/blob/main/LICENSE",
+  "about_url": "",
+  "authors": "Webdirekt",
+  "date": "17-09-2021",
+  "theme_version": "0.1",
+  "minimum_discourse_version": null,
+  "maximum_discourse_version": null,
+  "learn_more": "https://meta.discourse.org/t/beginners-guide-to-using-discourse-themes/91966"
+}

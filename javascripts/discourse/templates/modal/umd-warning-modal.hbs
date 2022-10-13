@@ -3,7 +3,7 @@
 {{!-- Display the Result return by the Markdownlint JS --}}
 {{!-- {{cook-text (concat '\n```\n' model.umd_markdownlintResult.warningMessage '\n```\n')}} --}}
 {{#each model.umd_markdownlintResult as |warningMsg|}}
-    {{cook-text (concat  '\n```\nLine ' warningMsg.lineNumber ': ' warningMsg.errorContext '\n```\n') }}
+    {{cook-text (concat  'Line ' warningMsg.lineNumber ': ' warningMsg.errorContext) }}
 {{/each}}
 <label for="umd_do-not-show-again" class="checkbox-label">
   {{input

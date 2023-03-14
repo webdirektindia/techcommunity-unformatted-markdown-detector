@@ -25,6 +25,7 @@ export default {
       });
 
       api.modifyClass("model:composer", {
+        pluginId: 'techcommunity-composer-model',
         umd_shouldPermanentlyDismiss: false,
         umd_markdownlintResult: {},
         umd_checkPermanentlyDismissed: () =>
@@ -219,6 +220,7 @@ export default {
       });
 
       api.modifyClass("controller:composer", {
+        pluginId: 'techcommunity-composer-controller',
         umd_permanentlyDismiss() {
           localStorage.umd_warningPermanentlyDismissed = "1";
         },

@@ -229,7 +229,7 @@ export default {
           if (this.model.umd_shouldPermanentlyDismiss) {
             this.umd_permanentlyDismiss();
           }
-          this.send("closeModal");
+          this.set("closeModal");
         },
 
         save(...args) {

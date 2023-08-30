@@ -1,0 +1,27 @@
+<DModal @title={{theme-i18n "warning_umc_modal.title"}} 
+  @closeModal={{@closeModal}} @icon="man_technologist" class="umd_warning-modal">
+  <:body>   
+    {{cook-text (theme-i18n "warning_umc_modal.content")}}
+     {{#each model.umd_markdownlintResult as |warningMsg|}}
+      {{cook-text (concat  'Line ' warningMsg.lineNumber ': ' warningMsg.errorContext) }}
+    {{/each}}
+    <label for="umd_do-not-show-again" class="checkbox-label">
+      {{input
+        type="checkbox"
+        id="umd_do-not-show-again"
+        name="umd_do-not-show-again"
+        checked=model.umd_shouldPermanentlyDismiss
+      }}
+      {{theme-i18n "warning_umc_modal.do_not_show_again"}}
+    </label>
+  </:body>
+  <:footer>
+    <DButton class="btn-primary" 
+      @icon="pencil-alt"
+      @translatedLabel={{theme-i18n "warning_umc_modal.fix_post"}}
+      @action={{action "goBackAndFix"}} />
+    <DButton 
+      @translatedLabel={{theme-i18n "warning_umc_modal.ignore_and_post_anyway"}}
+      @action={{action "ignoreAndProceed"}} />
+  </:footer>
+</DModal>
